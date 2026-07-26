@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights — RUCEEE LAB</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/brand/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
+        <span>RUCEEE LAB</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="insights.html" class="active">Insights</a></li>
+        <li><a href="index.html#join">Join Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <h1 class="section-title">Insights</h1>
+    <p class="section-subtitle">Case studies and technical notes from our work.</p>
+
+    <div class="tag-filter">
+      <button class="tag-btn active" data-filter="all">All</button>
+      <button class="tag-btn" data-filter="floods">Floods</button>
+      <button class="tag-btn" data-filter="wind">Wind</button>
+      <button class="tag-btn" data-filter="fire">Fire</button>
+      <button class="tag-btn" data-filter="energy">Energy</button>
+    </div>
+
+    <div class="insight-grid" id="insightGrid">
+
+      <a href="guadalupe-flood.html" class="insight-card" data-tag="floods">
+        <div class="insight-thumb">
+          <img src="images/insights/guadalupe/fema-comparison.png" alt="Flood simulation compared with FEMA hazard maps">
+        </div>
+        <div class="insight-body">
+          <div class="insight-meta">
+            <span class="insight-tag">Floods</span>
+            <span class="insight-date">January 2026</span>
+          </div>
+          <h3>Community-Scale Flood Intelligence</h3>
+          <p class="insight-sub">Guadalupe River Watershed</p>
+          <p class="insight-excerpt">A physics-based framework for high-resolution flood hazard mapping across Kerr County and the Texas Hill Country.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="insight-empty" id="insightEmpty">No articles in this category yet.</p>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
+          <span>RUCEEE LAB</span>
+        </div>
+        <p>Resilience for Urban Climate, Energy and Environmental Extremes.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sitemap</h4>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="index.html#join">Join Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <p class="footer-email">
+          <a href="mailto:info@ruceeelab.com" class="footer-link">info@ruceeelab.com</a>
+        </p>
+        <ul class="footer-locations">
+          <li><span class="loc-dot"></span><span class="loc-city">London</span><span class="loc-note">Registered Office</span></li>
+          <li><span class="loc-dot"></span><span class="loc-city">Texas</span><span class="loc-note">United States</span></li>
+          <li><span class="loc-dot"></span><span class="loc-city">Cairo</span><span class="loc-note">Egypt</span></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 RUCEEE LAB. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    /* Tag filtering */
+    const cards    = document.querySelectorAll('.insight-card');
+    const buttons  = document.querySelectorAll('.tag-btn');
+    const emptyMsg = document.getElementById('insightEmpty');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        let visible = 0;
+
+        cards.forEach(card => {
+          const show = (filter === 'all' || card.dataset.tag === filter);
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+
+        emptyMsg.style.display = visible === 0 ? 'block' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
