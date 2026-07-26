@@ -5,84 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RUCEEE LAB — Resilience for Urban Climate, Energy and Environmental Extremes</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Full-width image cards with caption below */
-    .node-card {
-      flex-direction: column !important;
-      align-items: center !important;
-      text-align: center;
-      padding: 12px 12px 10px !important;
-      gap: 10px;
-    }
-    .node-card .card-img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 6px;
-      display: block;
-    }
-    
-    /* Creative Stacked Vision/Mission Box Layout */
-    .vm-card-stacked {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      /* A rich, distinct gradient background so it stands out */
-      background: linear-gradient(145deg, #0a192f, #112240); 
-      border-left: 5px solid #00d4ff; /* Cyan accent edge */
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      border-right: 1px solid rgba(255, 255, 255, 0.05);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
-      border-radius: 12px;
-      padding: 3.5rem;
-    }
-    
-    .vm-block {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .vm-card-stacked .vm-title {
-      color: #00d4ff; /* Makes the title pop */
-      font-size: 1.8rem;
-      margin: 0;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .vm-card-stacked p {
-      margin: 0;
-      font-size: 1.15rem;
-      line-height: 1.6;
-      color: #e2e8f0;
-    }
-
-    /* A sleek glowing line to separate Vision and Mission */
-    .vm-horizontal-divider {
-      height: 1px;
-      width: 100%;
-      background: linear-gradient(90deg, #00d4ff 0%, rgba(0, 212, 255, 0) 80%);
-      opacity: 0.6;
-    }
-    
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      .vm-card-stacked {
-        padding: 2rem;
-      }
-    }
-  </style>
+  <link rel="icon" href="images/brand/logo.svg" type="image/svg+xml">
 </head>
 <body>
 
   <nav class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
-        <span class="logo-mark"></span>
+
+      <a href="index.html" class="nav-logo">
+        <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
         <span>RUCEEE LAB</span>
-      </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="#join">Join Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
     </div>
   </nav>
 
@@ -97,16 +43,14 @@
   </header>
 
   <section class="section">
-    <!-- The new stacked, creative Vision/Mission box -->
     <div class="vm-card-stacked">
       <div class="vm-block">
         <h2 class="vm-title">Our Vision</h2>
         <p>Securing urban communities against the rising frequency of environmental extremes through high-fidelity intelligence and rapid mitigation.</p>
       </div>
-      
-      <!-- Creative horizontal divider -->
+
       <div class="vm-horizontal-divider"></div>
-      
+
       <div class="vm-block">
         <h2 class="vm-title">Our Mission</h2>
         <p>RUCEEE LAB integrates physics-based modeling and physics-informed generative AI to assess community vulnerability to environmental extremes, providing the mitigation strategies needed to protect people, infrastructure, and the environment.</p>
@@ -119,10 +63,10 @@
       <h2 class="section-title">RUCEEE LAB Integrated Framework</h2>
       <p class="section-subtitle">Our proprietary intelligence pipeline transforming raw hazard data into strategic resilience.</p>
     </div>
-    
+
     <div class="pipeline-container">
-      
-      <!-- ── 1. INPUTS ── -->
+
+      <!-- 1. INPUTS -->
       <div class="pipeline-col inputs-col">
         <h3 class="col-label label-red">Environmental Drivers</h3>
 
@@ -148,19 +92,19 @@
 
       </div>
 
-      <div class="data-stream stream-horizontal"></div>
+      <div class="data-stream"></div>
 
-      <!-- ── 2. ENGINE ── -->
+      <!-- 2. ENGINE -->
       <div class="pipeline-col engine-col">
         <div class="engine-core">
           <div class="engine-grid-bg"></div>
-          
+
           <h3 class="engine-title">RUCEEE LAB Assessment Engine</h3>
-          
+
           <div class="engine-metrics">
-            <span>Exposure</span> <span class="dot">&rarr;</span> 
-            <span>Vulnerability</span> <span class="dot">&rarr;</span> 
-            <span>Risk</span> <span class="dot">&rarr;</span> 
+            <span>Exposure</span> <span class="dot">&rarr;</span>
+            <span>Vulnerability</span> <span class="dot">&rarr;</span>
+            <span>Risk</span> <span class="dot">&rarr;</span>
             <span>Resilience</span>
           </div>
 
@@ -187,9 +131,9 @@
         </div>
       </div>
 
-      <div class="data-stream stream-horizontal"></div>
+      <div class="data-stream"></div>
 
-      <!-- ── 3. OUTPUTS ── -->
+      <!-- 3. OUTPUTS -->
       <div class="pipeline-col outputs-col">
         <h3 class="col-label label-green">Strategic Outcomes</h3>
 
@@ -218,21 +162,113 @@
     </div>
   </section>
 
+  <!-- ===== JOIN OUR TEAM ===== -->
+  <section class="section join-section" id="join">
+    <h2 class="section-title">Join Our Team</h2>
+
+    <div class="join-grid">
+
+      <!-- Open Positions -->
+      <div class="join-card">
+        <div class="join-icon">💼</div>
+        <h3>Open Positions</h3>
+
+        <!-- EMPTY STATE — replace with role list when hiring -->
+        <div class="join-empty">
+          <p>Nothing open right now. If you want to be considered when something comes up, send your CV.</p>
+        </div>
+
+        <!--
+        WHEN YOU HAVE ROLES, delete the .join-empty block above
+        and use this pattern instead:
+
+        <ul class="role-list">
+          <li>
+            <span class="role-title">Hydraulic Modelling Engineer</span>
+            <span class="role-meta">London · Full time</span>
+          </li>
+        </ul>
+        -->
+
+        <a class="join-btn" href="mailto:info@ruceeelab.com?subject=Job%20Application%20%E2%80%94%20General">
+          Send your CV
+        </a>
+      </div>
+
+      <!-- Collaboration -->
+      <div class="join-card">
+        <div class="join-icon">🤝</div>
+        <h3>Collaboration</h3>
+
+        <div class="join-empty">
+          <p>If you have a project or proposal in flood, wind, fire, or energy resilience, tell us about it.</p>
+        </div>
+
+        <a class="join-btn" href="mailto:info@ruceeelab.com?subject=Collaboration%20Proposal%20%E2%80%94%20">
+          Propose a collaboration
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact-section" id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-email-box">
+      <span class="contact-email-label">Email us</span>
+      <a class="contact-email" href="mailto:info@ruceeelab.com?subject=General%20Enquiry">info@ruceeelab.com</a>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="footer-container">
+
       <div class="footer-col">
         <div class="footer-brand">
-          <span class="logo-mark"></span>
+          <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
           <span>RUCEEE LAB</span>
         </div>
         <p>Resilience for Urban Climate, Energy and Environmental Extremes.</p>
       </div>
-      <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-end;">
-        <div style="text-align: left;">
-          <h4>Get in Touch</h4>
-          <p>Email: <a href="mailto:info@ruceeelab.com" class="footer-link">info@ruceeelab.com</a></p>
-        </div>
+
+      <div class="footer-col">
+        <h4>Sitemap</h4>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="#join">Join Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
+
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <p class="footer-email">
+          <a href="mailto:info@ruceeelab.com" class="footer-link">info@ruceeelab.com</a>
+        </p>
+
+        <ul class="footer-locations">
+          <li>
+            <span class="loc-dot"></span>
+            <span class="loc-city">London</span>
+            <span class="loc-note">Registered Office</span>
+          </li>
+          <li>
+            <span class="loc-dot"></span>
+            <span class="loc-city">Texas</span>
+            <span class="loc-note">United States</span>
+          </li>
+          <li>
+            <span class="loc-dot"></span>
+            <span class="loc-city">Cairo</span>
+            <span class="loc-note">Egypt</span>
+          </li>
+        </ul>
+      </div>
+
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 RUCEEE LAB. All rights reserved.</p>
@@ -240,6 +276,7 @@
   </footer>
 
   <script>
+    /* Hero background rotation */
     const heroSection = document.querySelector('.hero');
     const images = [
       "url('images/home/hero-1.jpg')",
@@ -252,7 +289,26 @@
     setInterval(() => {
       currentIndex = (currentIndex + 1) % images.length;
       heroSection.style.backgroundImage = `linear-gradient(rgba(4,15,30,0.65), rgba(4,15,30,0.8)), ${images[currentIndex]}`;
-    }, 6000); 
+    }, 6000);
+
+    /* Hamburger menu */
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    /* Close menu after tapping a link */
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   </script>
 
 </body>
