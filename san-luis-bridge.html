@@ -9,6 +9,8 @@
 </head>
 <body>
 
+  <canvas class="net-bg" id="netBg" aria-hidden="true"></canvas>
+
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
@@ -20,10 +22,16 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
+        <li class="nav-item-drop">
+          <button class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">Products<span class="nav-caret" aria-hidden="true"></span></button>
+          <ul class="nav-drop-menu">
+            <li><a href="resolution-v0-1.html">Resolution v0.1</a></li>
+          </ul>
+        </li>
         <li><a href="insights.html" class="active">Insights</a></li>
-        <li><a href="index.html#join">Join Us</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="collaborate.html">Collaborate</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -268,22 +276,21 @@
         <h4>Sitemap</h4>
         <ul class="footer-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
+          <li><a href="resolution-v0-1.html">Resolution v0.1</a></li>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="index.html#join">Join Us</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="collaborate.html">Collaborate</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Get in Touch</h4>
-        <p class="footer-email">
-          <a href="mailto:info@ruceeelab.com" class="footer-link">info@ruceeelab.com</a>
-        </p>
+        <p class="footer-email"><span class="plain-email">info@ruceeelab.com</span></p>
         <ul class="footer-locations">
-          <li><span class="loc-dot"></span><span class="loc-city">London</span><span class="loc-note">Registered Office</span></li>
-          <li><span class="loc-dot"></span><span class="loc-city">Texas</span><span class="loc-note">United States</span></li>
-          <li><span class="loc-dot"></span><span class="loc-city">Cairo</span><span class="loc-note">Egypt</span></li>
+          <li><span class="loc-dot"></span><span class="loc-city">London, UK</span></li>
+          <li><span class="loc-dot"></span><span class="loc-city">College Station, TX, USA</span></li>
+          <li><span class="loc-dot"></span><span class="loc-city">Giza, Egypt</span></li>
         </ul>
       </div>
 
@@ -294,13 +301,107 @@
   </footer>
 
   <script>
+    /* Navigation */
     const navToggle = document.getElementById('navToggle');
     const navLinks  = document.getElementById('navLinks');
+
     navToggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       navToggle.classList.toggle('open', isOpen);
       navToggle.setAttribute('aria-expanded', isOpen);
     });
+
+    /* Products dropdown */
+    document.querySelectorAll('.nav-drop-toggle').forEach(btn => {
+      btn.addEventListener('click', event => {
+        event.stopPropagation();
+        const item = btn.parentElement;
+        const isOpen = item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.nav-item-drop.open').forEach(item => {
+        item.classList.remove('open');
+        item.querySelector('.nav-drop-toggle').setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* Network background */
+    (function () {
+      const canvas = document.getElementById('netBg');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let width = 0, height = 0, nodes = [];
+
+      function resize() {
+        const dpr = window.devicePixelRatio || 1;
+        width  = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width  = width  * dpr;
+        canvas.height = height * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        seed();
+      }
+
+      function seed() {
+        const count = Math.min(130, Math.round((width * height) / 15000));
+        nodes = [];
+        for (let i = 0; i < count; i++) {
+          nodes.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.18,
+            vy: (Math.random() - 0.5) * 0.18,
+            r: 1.2 + Math.random() * 1.5
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const d  = Math.sqrt(dx * dx + dy * dy);
+            if (d < 155) {
+              ctx.strokeStyle = 'rgba(34,211,238,' + (0.42 * (1 - d / 155)).toFixed(3) + ')';
+              ctx.lineWidth = 0.9;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+        ctx.fillStyle = 'rgba(34,211,238,0.85)';
+        for (const n of nodes) {
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      function step() {
+        for (const n of nodes) {
+          n.x += n.vx;
+          n.y += n.vy;
+          if (n.x < 0 || n.x > width)  n.vx *= -1;
+          if (n.y < 0 || n.y > height) n.vy *= -1;
+        }
+        draw();
+        requestAnimationFrame(step);
+      }
+
+      resize();
+      window.addEventListener('resize', () => { resize(); draw(); });
+
+      if (reduced) { draw(); } else { requestAnimationFrame(step); }
+    })();
   </script>
 
 </body>
