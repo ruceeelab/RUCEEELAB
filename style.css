@@ -128,7 +128,7 @@ body {
   position: relative;
   height: 85vh;
   min-height: 500px;
-  background: linear-gradient(rgba(2,8,19,0.7), rgba(2,8,19,0.9)), url('images/home/hero-1.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(2,8,19,0.3), rgba(2,8,19,0.45)), url('images/home/hero-1.jpg') center/cover no-repeat;
   display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem;
   transition: background-image 1.5s ease-in-out;
 }
@@ -181,7 +181,7 @@ body {
    ======================================================== */
 .showcase-section {
   position: relative;
-  background: radial-gradient(circle at center, #071f3a 0%, var(--navy-deep) 70%);
+  background: radial-gradient(circle at center, rgba(7,31,58,0.55) 0%, rgba(2,8,19,0.25) 70%);
   border-top: 1px solid rgba(255,255,255,0.02);
   border-bottom: 1px solid rgba(255,255,255,0.02);
 }
@@ -276,12 +276,14 @@ body {
   border-radius: 8px;
   border: 1px dashed rgba(34,211,238,0.3);
   color: #fff;
-  font-size: 0.95rem;
+  font-size: clamp(0.6rem, 1.45vw, 0.95rem);
   font-weight: 600;
   margin-bottom: 2rem;
   z-index: 1;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.engine-metrics .dot { color: var(--accent); margin: 0 0.5rem; }
+.engine-metrics .dot { color: var(--accent); margin: 0 0.28rem; }
 
 .tech-stack {
   position: relative;
@@ -394,7 +396,7 @@ body {
    CONTACT
    ======================================================== */
 .contact-section {
-  background: radial-gradient(circle at center, #071f3a 0%, var(--navy-deep) 70%);
+  background: radial-gradient(circle at center, rgba(7,31,58,0.55) 0%, rgba(2,8,19,0.25) 70%);
   border-top: 1px solid rgba(255,255,255,0.02);
   max-width: none;
 }
@@ -810,7 +812,7 @@ body {
 
 
 /* ===== Footer ===== */
-.footer { background: #02060d; padding: 4rem 2rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer { background: rgba(2,6,13,0.75); padding: 4rem 2rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); }
 .footer-container {
   max-width: 1000px;
   margin: 0 auto 3rem;
@@ -923,4 +925,227 @@ body {
   .engine-core { padding: 2rem 1rem; }
   .join-card { padding: 1.8rem; }
   .contact-email-box { padding: 2rem 1.2rem; }
+}
+
+/* ========================================================
+   NETWORK BACKGROUND
+   ======================================================== */
+.net-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Content sits above the network layer.
+   The navbar is excluded: it keeps its own sticky positioning and
+   higher stacking order so the Products dropdown opens over the hero. */
+.hero,
+.section,
+.article-hero,
+.article-toc,
+.article,
+.page-hero,
+.footer { position: relative; z-index: 1; }
+
+/* ========================================================
+   PRODUCTS DROPDOWN
+   ======================================================== */
+.nav-item-drop { position: relative; }
+
+.nav-drop-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  padding: 0.4rem 0;
+  position: relative;
+  transition: color 0.25s;
+  white-space: nowrap;
+}
+.nav-drop-toggle::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 2px;
+  background: var(--accent);
+  transition: width 0.25s;
+}
+.nav-item-drop:hover .nav-drop-toggle,
+.nav-drop-toggle:focus-visible { color: #fff; }
+.nav-item-drop:hover .nav-drop-toggle::after { width: 100%; }
+.nav-drop-active .nav-drop-toggle { color: var(--accent); }
+.nav-drop-active .nav-drop-toggle::after { width: 100%; }
+
+.nav-caret {
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.25s;
+}
+.nav-item-drop:hover .nav-caret,
+.nav-item-drop.open .nav-caret { transform: rotate(180deg); }
+
+.nav-drop-menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 0;
+  min-width: 200px;
+  list-style: none;
+  background: rgba(6, 26, 46, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(34, 211, 238, 0.22);
+  border-radius: 10px;
+  padding: 0.4rem;
+  box-shadow: 0 18px 40px -14px rgba(0,0,0,0.85);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.22s, transform 0.22s, visibility 0.22s;
+}
+.nav-item-drop:hover .nav-drop-menu,
+.nav-item-drop.open .nav-drop-menu,
+.nav-item-drop:focus-within .nav-drop-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-drop-menu a {
+  display: block;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.92rem;
+}
+.nav-drop-menu a::after { display: none; }
+.nav-drop-menu a:hover { background: rgba(34, 211, 238, 0.1); color: #fff; }
+
+/* ========================================================
+   SIMPLE PAGE HEADERS
+   ======================================================== */
+.page-hero {
+  padding: 5rem 2rem 3.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.page-hero h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  letter-spacing: -0.5px;
+  margin-bottom: 0.7rem;
+}
+.page-hero p {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ========================================================
+   INFO PANELS AND PLAIN EMAIL
+   ======================================================== */
+.info-panel {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  background: linear-gradient(145deg, var(--panel), rgba(6,26,46,0.6));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-top: 3px solid var(--accent);
+  border-radius: 14px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.7);
+}
+.info-panel h2 {
+  color: #fff;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.1rem;
+}
+.info-panel p { color: var(--text-dim); margin-bottom: 1rem; }
+.info-panel p:last-child { margin-bottom: 0; }
+
+.email-block {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(10, 31, 56, 0.6);
+  border: 1px dashed rgba(34,211,238,0.35);
+  border-radius: 14px;
+  padding: 2.5rem 2rem;
+}
+.email-label {
+  display: block;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+}
+.plain-email {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  word-break: break-word;
+  user-select: all;
+}
+.email-block .plain-email {
+  display: block;
+  font-size: clamp(1.15rem, 3vw, 1.7rem);
+  font-weight: 700;
+}
+
+/* Product placeholder */
+.product-empty {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-dim);
+  padding: 2rem 0 1rem;
+}
+
+@media (max-width: 900px) {
+  .nav-links { max-height: 0; }
+  .nav-links.open { max-height: 620px; }
+
+  .nav-item-drop { border-top: 1px solid rgba(255,255,255,0.05); }
+  .nav-drop-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .nav-drop-toggle::after { display: none; }
+
+  .nav-drop-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: rgba(2, 8, 19, 0.6);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav-item-drop:hover .nav-drop-menu { max-height: 0; }
+  .nav-item-drop.open .nav-drop-menu { max-height: 200px; }
+  .nav-drop-menu a { padding: 0.9rem 3rem; border-radius: 0; }
+}
+
+@media (max-width: 600px) {
+  .page-hero { padding: 3.5rem 1.5rem 2.5rem; }
+  .info-panel { padding: 1.8rem; }
+  .email-block { padding: 2rem 1.2rem; }
 }
