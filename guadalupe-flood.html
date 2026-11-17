@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community-Scale Flood Intelligence — RUCEEE LAB</title>
-  <meta name="description" content="High-resolution, physics-based flood hazard mapping for Kerr County, the Texas Hill Country and the Guadalupe River watershed, compared against FEMA hazard information.">
+  <meta name="description" content="High-resolution, physics-based flood hazard mapping for Kerr County, the Texas Hill Country and the Guadalupe River watershed, validated against the July 2025 flood and compared with FEMA hazard maps.">
   <link rel="canonical" href="https://www.ruceeelab.com/guadalupe-flood.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RUCEEE LAB">
   <meta property="og:title" content="Community-Scale Flood Intelligence — RUCEEE LAB">
-  <meta property="og:description" content="High-resolution, physics-based flood hazard mapping for Kerr County, the Texas Hill Country and the Guadalupe River watershed, compared against FEMA hazard information.">
+  <meta property="og:description" content="High-resolution, physics-based flood hazard mapping for Kerr County, the Texas Hill Country and the Guadalupe River watershed, validated against the July 2025 flood and compared with FEMA hazard maps.">
   <meta property="og:url" content="https://www.ruceeelab.com/guadalupe-flood.html">
   <meta property="og:image" content="https://www.ruceeelab.com/images/brand/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#030a16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/brand/logo.svg" type="image/svg+xml">
 </head>
@@ -20,35 +24,32 @@
 
   <canvas class="net-bg" id="netBg" aria-hidden="true"></canvas>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
+        <img class="logo-mark" src="images/brand/logo.svg" alt="" width="38" height="38">
         <span>RUCEEE LAB</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
-        <li class="nav-item-drop">
-          <button class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">Products<span class="nav-caret" aria-hidden="true"></span></button>
-          <ul class="nav-drop-menu">
-            <li><a href="resolution-v0-1.html">Resolution v0.1</a></li>
-          </ul>
-        </li>
+        <!-- Products (hidden until launch):
+        <li><a href="resolution-v0-1.html">Products</a></li>
+        -->
         <li><a href="insights.html" class="active">Insights</a></li>
         <li><a href="collaborate.html">Collaborate</a></li>
         <li><a href="careers.html">Careers</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
       </ul>
     </div>
   </nav>
 
+  <main>
   <header class="article-hero">
-    <div class="article-hero-grid"></div>
     <div class="article-hero-content">
-      <p class="article-kicker">Floods</p>
+      <span class="tag">Floods</span>
       <h1>Community-Scale Flood Intelligence</h1>
       <p class="article-sub">Guadalupe River Watershed</p>
       <p class="article-strap">A Physics-Based Framework for High-Resolution Flood Hazard Mapping</p>
@@ -60,7 +61,7 @@
     <div class="article-toc-inner">
       <span class="toc-label">On this page</span>
       <a href="#intelligence">Building Community-Scale Flood Intelligence</a>
-      <a href="#vision">Our Vision</a>
+      <a href="#vision">What the Framework Delivers</a>
       <a href="#case-study">Case Study: July 2025 Flood</a>
       <a href="#infrastructure">Infrastructure Impact Assessment</a>
       <a href="#ahead">Looking Ahead</a>
@@ -72,9 +73,9 @@
     <section class="article-section" id="intelligence">
       <h2>Building Community-Scale Flood Intelligence</h2>
 
-      <p>Flooding continues to be one of the most damaging natural hazards worldwide, threatening communities, infrastructure, transportation networks, and local economies. In Central Texas, the Guadalupe River watershed has experienced numerous devastating floods driven by steep terrain, rapidly responding tributaries, and increasingly intense rainfall events.</p>
+      <p>Flooding is one of the most damaging natural hazards worldwide, threatening lives, infrastructure, transportation networks and local economies. In Central Texas, the Guadalupe River watershed has seen repeated devastating floods, driven by steep terrain, fast-responding tributaries and increasingly intense rainfall.</p>
 
-      <p>RUCEEE Lab aims to develop practical flood intelligence products that directly support local communities throughout Kerr County, the Texas Hill Country, and the Guadalupe River watershed. Our objective is to combine physics-based hydrodynamic modeling with high-resolution geospatial datasets to provide reliable flood hazard information for engineering design, emergency planning, and long-term community resilience.</p>
+      <p>RUCEEE LAB is developing practical flood intelligence for communities across Kerr County, the Texas Hill Country and the wider Guadalupe River watershed. We combine physics-based hydrodynamic modeling with high-resolution geospatial data to deliver reliable flood hazard information for engineering design, emergency planning and long-term community resilience.</p>
 
       <p>Figure 1 shows the location of the Guadalupe River watershed within the State of Texas.</p>
 
@@ -85,11 +86,11 @@
     </section>
 
     <section class="article-section" id="vision">
-      <h2>Our Vision</h2>
+      <h2>What the Framework Delivers</h2>
 
-      <p>A high-resolution physics-based flood modeling framework is developed capable of simulating both pluvial flooding (caused by intense rainfall) and fluvial flooding (caused by river overflow). The framework is designed to generate flood hazard products across a wide range of rainfall scenarios, flood return periods, and future climate projections, providing information that can directly support communities, engineers, planners, emergency managers, and decision makers.</p>
+      <p>We have developed a high-resolution, physics-based flood modeling framework that simulates both pluvial flooding (from intense rainfall) and fluvial flooding (from river overflow). It generates flood hazard products across a wide range of rainfall scenarios, return periods and future climate projections, giving communities, engineers, planners, emergency managers and decision makers information they can act on.</p>
 
-      <p>The framework is intended to provide to the Guadalupe watershed communities:</p>
+      <p>For communities across the Guadalupe watershed, the framework is designed to provide:</p>
 
       <ul class="article-list">
         <li>High-resolution pluvial and fluvial flood inundation maps.</li>
@@ -108,14 +109,14 @@
     <section class="article-section" id="case-study">
       <h2>Case Study: July 2025 Guadalupe River Flood</h2>
 
-      <p>Devastating July 2025 Guadalupe River flood is modeled for validation. The event was triggered by exceptionally intense rainfall that generated rapid river rises, widespread inundation, and severe damage across the watershed. More than one hundred lives were lost, while numerous roads, bridges, and surrounding communities experienced catastrophic flooding.</p>
+      <p>To validate the framework, we modeled the devastating July 2025 Guadalupe River flood. Exceptionally intense rainfall caused rapid river rises, widespread inundation and severe damage across the watershed. More than one hundred lives were lost, and many roads, bridges and communities were catastrophically flooded.</p>
 
       <figure class="article-figure">
-        <img loading="lazy" src="images/insights/guadalupe/precipitation.webp" alt="24hr accumulated precipitation over central Texas region">
-        <figcaption><span class="fig-num">Figure 2.</span> 24hr Accumulated Precipitation over central Texas region.</figcaption>
+        <img loading="lazy" src="images/insights/guadalupe/precipitation.webp" alt="24-hour accumulated precipitation over Central Texas">
+        <figcaption><span class="fig-num">Figure 2.</span> 24-hour accumulated precipitation over Central Texas during the July 2025 event.</figcaption>
       </figure>
 
-      <p>Figure 3 shows flood inundation depths at different thresholds together with observed river-stage measurements from a USGS stream gauge. The comparison illustrates inundated regions extending beyond existing FEMA flood hazard maps, highlighting the value of high-resolution event-based hydrodynamic modeling for community-scale flood assessment.</p>
+      <p>Figure 3 shows simulated inundation depths at several thresholds alongside observed river stage from a USGS stream gauge. Flooded areas extend well beyond existing FEMA flood hazard maps, which shows the value of high-resolution, event-based hydrodynamic modeling for community-scale flood assessment.</p>
 
       <figure class="article-figure">
         <img loading="lazy" src="images/insights/guadalupe/fema-comparison.webp" alt="High-resolution simulation of the July 2025 Guadalupe River flood compared with FEMA hazard information">
@@ -126,7 +127,7 @@
     <section class="article-section" id="infrastructure">
       <h2>Infrastructure Impact Assessment</h2>
 
-      <p>Beyond predicting flood extent, the modeling framework enables assessment of impacts on critical infrastructure.</p>
+      <p>Beyond flood extent, the framework lets us assess impacts on critical infrastructure.</p>
 
       <p>Figure 4 highlights several bridges affected during the July 2025 flood, illustrating how high-resolution flood simulations can identify vulnerable transportation assets and support infrastructure resilience studies. Similar analyses cover roads, residential neighborhoods, public facilities, utilities, and other critical infrastructure throughout the watershed.</p>
 
@@ -139,155 +140,45 @@
     <section class="article-section" id="ahead">
       <h2>Looking Ahead</h2>
 
-      <p>RUCEEE Lab is committed to advancing next-generation flood intelligence for communities throughout Central Texas. By integrating physics-based hydrodynamic models, high-resolution terrain data, geospatial analysis, and future climate projections, our goal is to deliver actionable flood hazard products that improve preparedness, reduce infrastructure vulnerability, and support resilient community development.</p>
+      <p>RUCEEE LAB is committed to advancing next-generation flood intelligence for communities throughout Central Texas. By integrating physics-based hydrodynamic models, high-resolution terrain data, geospatial analysis and future climate projections, we aim to deliver actionable flood hazard products that improve preparedness, reduce infrastructure vulnerability and support resilient community development.</p>
     </section>
 
-    <a href="insights.html" class="article-back">&larr; Back to Insights</a>
+    <a href="insights.html" class="btn btn-ghost article-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Back to insights</a>
 
   </article>
+  </main>
 
   <footer class="footer">
     <div class="footer-container">
-
       <div class="footer-col">
         <div class="footer-brand">
-          <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
+          <img class="logo-mark" src="images/brand/logo.svg" alt="" width="32" height="32">
           <span>RUCEEE LAB</span>
         </div>
-        <p>Resilience for Urban Climate, Energy and Environmental Extremes.</p>
+        <p>Resilience for Urban Climate, Energy and Environmental Extremes. Physics-based modeling and physics-informed AI for communities, infrastructure and energy systems.</p>
       </div>
-
       <div class="footer-col">
-        <h4>Sitemap</h4>
+        <h4>Explore</h4>
         <ul class="footer-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="resolution-v0-1.html">Resolution v0.1</a></li>
+          <!-- <li><a href="resolution-v0-1.html">Products</a></li> -->
           <li><a href="insights.html">Insights</a></li>
           <li><a href="collaborate.html">Collaborate</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <p class="footer-email"><a class="plain-email" href="mailto:info@ruceeelab.com">info@ruceeelab.com</a></p>
-        <ul class="footer-locations">
-          <li><span class="loc-dot"></span><span class="loc-city">London, UK</span></li>
-          <li><span class="loc-dot"></span><span class="loc-city">College Station, TX, USA</span></li>
-          <li><span class="loc-dot"></span><span class="loc-city">Giza, Egypt</span></li>
-        </ul>
+        <h4>Get in touch</h4>
+        <p class="footer-email"><a href="mailto:info@ruceeelab.com">info@ruceeelab.com</a></p>
+        <p class="footer-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>College Station, Texas, USA</span></p>
       </div>
-
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 RUCEEE LAB. All rights reserved.</p>
+      <p>&copy; <span id="year">2026</span> RUCEEE LAB. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    /* Navigation */
-    const navToggle = document.getElementById('navToggle');
-    const navLinks  = document.getElementById('navLinks');
-
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.classList.toggle('open', isOpen);
-      navToggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    /* Products dropdown */
-    document.querySelectorAll('.nav-drop-toggle').forEach(btn => {
-      btn.addEventListener('click', event => {
-        event.stopPropagation();
-        const item = btn.parentElement;
-        const isOpen = item.classList.toggle('open');
-        btn.setAttribute('aria-expanded', isOpen);
-      });
-    });
-
-    document.addEventListener('click', () => {
-      document.querySelectorAll('.nav-item-drop.open').forEach(item => {
-        item.classList.remove('open');
-        item.querySelector('.nav-drop-toggle').setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    /* Network background */
-    (function () {
-      const canvas = document.getElementById('netBg');
-      if (!canvas) return;
-
-      const ctx = canvas.getContext('2d');
-      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      let width = 0, height = 0, nodes = [];
-
-      function resize() {
-        const dpr = window.devicePixelRatio || 1;
-        width  = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width  = width  * dpr;
-        canvas.height = height * dpr;
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        seed();
-      }
-
-      function seed() {
-        const count = Math.min(130, Math.round((width * height) / 15000));
-        nodes = [];
-        for (let i = 0; i < count; i++) {
-          nodes.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.18,
-            vy: (Math.random() - 0.5) * 0.18,
-            r: 1.2 + Math.random() * 1.5
-          });
-        }
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, width, height);
-        for (let i = 0; i < nodes.length; i++) {
-          for (let j = i + 1; j < nodes.length; j++) {
-            const dx = nodes[i].x - nodes[j].x;
-            const dy = nodes[i].y - nodes[j].y;
-            const d  = Math.sqrt(dx * dx + dy * dy);
-            if (d < 155) {
-              ctx.strokeStyle = 'rgba(34,211,238,' + (0.42 * (1 - d / 155)).toFixed(3) + ')';
-              ctx.lineWidth = 0.9;
-              ctx.beginPath();
-              ctx.moveTo(nodes[i].x, nodes[i].y);
-              ctx.lineTo(nodes[j].x, nodes[j].y);
-              ctx.stroke();
-            }
-          }
-        }
-        ctx.fillStyle = 'rgba(34,211,238,0.85)';
-        for (const n of nodes) {
-          ctx.beginPath();
-          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-
-      function step() {
-        for (const n of nodes) {
-          n.x += n.vx;
-          n.y += n.vy;
-          if (n.x < 0 || n.x > width)  n.vx *= -1;
-          if (n.y < 0 || n.y > height) n.vy *= -1;
-        }
-        draw();
-        requestAnimationFrame(step);
-      }
-
-      resize();
-      window.addEventListener('resize', () => { resize(); draw(); });
-
-      if (reduced) { draw(); } else { requestAnimationFrame(step); }
-    })();
-  </script>
-
+  <script src="site.js" defer></script>
 </body>
 </html>

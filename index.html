@@ -4,15 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RUCEEE LAB — Resilience for Urban Climate, Energy and Environmental Extremes</title>
-  <meta name="description" content="RUCEEE LAB combines physics-based modeling and physics-informed generative AI to assess community risk from floods, wind, wildfire and extreme heat, and to design mitigation that protects people, infrastructure and energy systems.">
+  <meta name="description" content="RUCEEE LAB combines high-fidelity physics-based modeling with physics-informed AI to show where floods, storms, wildfire and extreme heat will hit hardest, and which measures will protect people, infrastructure and energy systems.">
   <link rel="canonical" href="https://www.ruceeelab.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RUCEEE LAB">
   <meta property="og:title" content="RUCEEE LAB — Resilience for Urban Climate, Energy and Environmental Extremes">
-  <meta property="og:description" content="RUCEEE LAB combines physics-based modeling and physics-informed generative AI to assess community risk from floods, wind, wildfire and extreme heat, and to design mitigation that protects people, infrastructure and energy systems.">
+  <meta property="og:description" content="RUCEEE LAB combines high-fidelity physics-based modeling with physics-informed AI to show where floods, storms, wildfire and extreme heat will hit hardest, and which measures will protect people, infrastructure and energy systems.">
   <meta property="og:url" content="https://www.ruceeelab.com/">
   <meta property="og:image" content="https://www.ruceeelab.com/images/brand/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#030a16">
+  <link rel="preload" as="image" href="images/home/hero-wind.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/brand/logo.svg" type="image/svg+xml">
 </head>
@@ -20,328 +25,253 @@
 
   <canvas class="net-bg" id="netBg" aria-hidden="true"></canvas>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
+        <img class="logo-mark" src="images/brand/logo.svg" alt="" width="38" height="38">
         <span>RUCEEE LAB</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Home</a></li>
-        <li class="nav-item-drop">
-          <button class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">Products<span class="nav-caret" aria-hidden="true"></span></button>
-          <ul class="nav-drop-menu">
-            <li><a href="resolution-v0-1.html">Resolution v0.1</a></li>
-          </ul>
-        </li>
+        <!-- Products (hidden until launch):
+        <li><a href="resolution-v0-1.html">Products</a></li>
+        -->
         <li><a href="insights.html">Insights</a></li>
         <li><a href="collaborate.html">Collaborate</a></li>
         <li><a href="careers.html">Careers</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
       </ul>
     </div>
   </nav>
 
+  <main>
   <header class="hero">
+    <div class="hero-slide active" style="background-image:url('images/home/hero-wind.webp')"></div>
+    <div class="hero-slide" style="background-image:url('images/home/hero-flood.webp')"></div>
+    <div class="hero-slide" style="background-image:url('images/home/hero-city.webp')"></div>
     <div class="hero-content">
-      <h1>
-        <span class="line-white">Resilience for Urban Climate</span>
-        <span class="line-cyan">Energy and Environmental Extremes</span>
-      </h1>
-      <p>Building climate-resilient communities through advanced engineering solutions, innovative research, and AI-driven decision support.</p>
+      <h1 class="reveal d1">Resilience for Urban Climate, <span class="text-grad">Energy &amp; Environmental Extremes</span></h1>
+      <p class="hero-lead reveal d2">We pair high-fidelity physics-based modeling with physics-informed AI to show where floods, storms, wildfire and extreme heat will hit hardest, and which measures will protect people and infrastructure.</p>
+      <div class="hero-actions reveal d3">
+        <a class="btn btn-primary" href="insights.html">See our work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="collaborate.html">Partner with us</a>
+      </div>
     </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
   </header>
 
-  <section class="section">
-    <div class="vm-card-stacked">
-      <div class="vm-block">
-        <h2 class="vm-title">Our Vision</h2>
-        <p>Securing urban communities against the rising frequency of environmental extremes through high-fidelity intelligence and rapid mitigation.</p>
+  <section class="section" id="about">
+    <div class="container split">
+      <div class="reveal">
+        <span class="kicker">Who we are</span>
+        <h2 class="section-title">Engineering-grade intelligence for a world of extremes</h2>
+        <p>Extreme weather is becoming more frequent and more costly. Yet the decisions that matter most (where to invest, what to retrofit, which routes to keep open) still rely on coarse hazard maps and slow, one-off studies.</p>
+        <p><strong>RUCEEE LAB closes that gap.</strong> We build high-resolution models of how environmental extremes interact with cities, infrastructure and energy systems, then use physics-informed AI to run them fast enough to inform real planning and design decisions.</p>
       </div>
-
-      <div class="vm-horizontal-divider"></div>
-
-      <div class="vm-block">
-        <h2 class="vm-title">Our Mission</h2>
-        <p>RUCEEE LAB integrates physics-based modeling and physics-informed generative AI to assess community vulnerability to environmental extremes, providing the mitigation strategies needed to protect people, infrastructure, and the environment.</p>
+      <div class="vm-stack">
+        <div class="vm-card reveal d1">
+          <h3>Our vision</h3>
+          <p>Communities, infrastructure and energy systems that stay safe and functional as environmental extremes intensify.</p>
+        </div>
+        <div class="vm-card reveal d2">
+          <h3>Our mission</h3>
+          <p>To turn physics-based modeling and physics-informed generative AI into clear, defensible assessments of community vulnerability, and into the mitigation strategies that protect people, infrastructure and the environment.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section showcase-section">
-    <div class="showcase-header">
-      <h2 class="section-title">RUCEEE LAB Integrated Framework</h2>
-      <p class="section-subtitle">Our proprietary intelligence pipeline transforming raw hazard data into strategic resilience.</p>
-    </div>
-
-    <div class="pipeline-container">
-
-      <!-- 1. INPUTS -->
-      <div class="pipeline-col inputs-col">
-        <h3 class="col-label label-red">Environmental Drivers</h3>
-
-        <div class="node-card card-red">
-          <img loading="lazy" class="card-img" src="images/framework/inputs/flood.webp" alt="Flood">
-          Flood
-        </div>
-
-        <div class="node-card card-red">
-          <img loading="lazy" class="card-img" src="images/framework/inputs/wind.webp" alt="Wind">
-          Wind
-        </div>
-
-        <div class="node-card card-red">
-          <img loading="lazy" class="card-img" src="images/framework/inputs/wildfire.webp" alt="Wildfire">
-          Wildfire
-        </div>
-
-        <div class="node-card card-red">
-          <img loading="lazy" class="card-img" src="images/framework/inputs/extreme.webp" alt="Extreme Heat/Cold">
-          Extreme Heat/Cold
-        </div>
-
+  <section class="section" id="capabilities">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="kicker">What we do</span>
+        <h2 class="section-title">Three capabilities, one workflow</h2>
+        <p class="section-lead">Every project combines the fidelity of physics with the speed of AI, and ends in recommendations that engineers and decision makers can act on.</p>
       </div>
-
-      <div class="data-stream"></div>
-
-      <!-- 2. ENGINE -->
-      <div class="pipeline-col engine-col">
-        <div class="engine-core">
-          <div class="engine-grid-bg"></div>
-
-          <h3 class="engine-title">RUCEEE LAB Assessment Engine</h3>
-
-          <div class="engine-metrics">
-            <span>Exposure</span> <span class="dot">&rarr;</span>
-            <span>Vulnerability</span> <span class="dot">&rarr;</span>
-            <span>Risk</span> <span class="dot">&rarr;</span>
-            <span>Resilience</span>
-          </div>
-
-          <div class="tech-stack">
-            <div class="tech-item">
-              <div class="tech-icon">⚙️</div>
-              <div class="tech-text">
-                <strong>Physics-Based Modeling</strong>
-              </div>
-            </div>
-            <div class="tech-item">
-              <div class="tech-icon">🧠</div>
-              <div class="tech-text">
-                <strong>Generative AI &amp; Physics-Informed ML</strong>
-              </div>
-            </div>
-            <div class="tech-item">
-              <div class="tech-icon">🎯</div>
-              <div class="tech-text">
-                <strong>Data Driven Optimization</strong>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="cap-grid">
+        <article class="cap-card reveal">
+          <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></div>
+          <h3>Physics-based modeling</h3>
+          <p>High-resolution hydrodynamic, CFD and particle-based models that resolve how water, wind and heat interact with terrain, buildings and structures.</p>
+          <ul class="cap-tags"><li>Flood inundation</li><li>Storm surge &amp; waves</li><li>Urban microclimate</li><li>Fluid–structure interaction</li></ul>
+        </article>
+        <article class="cap-card reveal d1">
+          <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 10h4v4h-4z"/></svg></div>
+          <h3>Physics-informed generative AI</h3>
+          <p>Machine-learning models trained on physics that deliver high-resolution results in a fraction of the compute time, across far more scenarios.</p>
+          <ul class="cap-tags"><li>Super-resolution</li><li>Fast surrogates</li><li>Scenario generation</li><li>Uncertainty</li></ul>
+        </article>
+        <article class="cap-card reveal d2">
+          <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
+          <h3>Decision-focused optimization</h3>
+          <p>Turning model output into prioritized action: which assets are most exposed, which measures reduce risk most, and where investment pays off.</p>
+          <ul class="cap-tags"><li>Risk ranking</li><li>Mitigation design</li><li>Adaptation planning</li><li>Cost–benefit</li></ul>
+        </article>
       </div>
-
-      <div class="data-stream"></div>
-
-      <!-- 3. OUTPUTS -->
-      <div class="pipeline-col outputs-col">
-        <h3 class="col-label label-green">Strategic Outcomes</h3>
-
-        <div class="node-card card-green">
-          <img loading="lazy" class="card-img" src="images/framework/outputs/people-safety.webp" alt="People Safety">
-          People Safety
-        </div>
-
-        <div class="node-card card-green">
-          <img loading="lazy" class="card-img" src="images/framework/outputs/infrastructure-resilience.webp" alt="Infrastructure Resilience">
-          Infrastructure Resilience
-        </div>
-
-        <div class="node-card card-green">
-          <img loading="lazy" class="card-img" src="images/framework/outputs/property-protection.webp" alt="Property Protection">
-          Property Protection
-        </div>
-
-        <div class="node-card card-green">
-          <img loading="lazy" class="card-img" src="images/framework/outputs/energy-security.webp" alt="Energy Security">
-          Energy Security
-        </div>
-
-      </div>
-
     </div>
   </section>
+
+  <section class="section" id="approach">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="kicker">Our approach</span>
+        <h2 class="section-title">From hazard to resilient decision</h2>
+        <p class="section-lead">We follow each hazard through the full chain, from who and what is exposed to the measures that keep them safe.</p>
+      </div>
+      <div class="framework">
+        <div class="fw-col fw-hazards reveal">
+          <h3>Hazards we model</h3>
+          <div class="fw-grid">
+            <figure class="img-tile"><img loading="lazy" src="images/framework/inputs/flood.webp" alt="" width="1200" height="900"><span>Flooding</span></figure>
+            <figure class="img-tile"><img loading="lazy" src="images/framework/inputs/wind.webp" alt="" width="1200" height="900"><span>Wind &amp; hurricanes</span></figure>
+            <figure class="img-tile"><img loading="lazy" src="images/framework/inputs/wildfire.webp" alt="" width="1200" height="900"><span>Wildfire</span></figure>
+            <figure class="img-tile"><img loading="lazy" src="images/framework/inputs/extreme.webp" alt="" width="1200" height="900"><span>Extreme heat &amp; cold</span></figure>
+          </div>
+        </div>
+        <div class="approach reveal d1">
+          <h3>How we assess risk</h3>
+          <p class="approach-sub">Physics and AI working together at every step</p>
+          <ol class="chain">
+            <li>Exposure</li><li class="arrow" aria-hidden="true">→</li>
+            <li>Vulnerability</li><li class="arrow" aria-hidden="true">→</li>
+            <li>Risk</li><li class="arrow" aria-hidden="true">→</li>
+            <li>Resilience</li>
+          </ol>
+          <ul class="method-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>Physics-based modeling</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 10h4v4h-4z"/></svg>Physics-informed generative AI</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>Data-driven optimization</li>
+          </ul>
+        </div>
+        <div class="fw-col fw-outcomes reveal d2">
+          <h3>What we protect</h3>
+          <div class="fw-grid">
+            <figure class="img-tile"><img loading="lazy" src="images/framework/outputs/people-safety.webp" alt="" width="1200" height="900"><span>People’s safety</span></figure>
+            <figure class="img-tile"><img loading="lazy" src="images/framework/outputs/infrastructure-resilience.webp" alt="" width="1200" height="900"><span>Infrastructure resilience</span></figure>
+            <figure class="img-tile"><img loading="lazy" src="images/framework/outputs/property-protection.webp" alt="" width="1200" height="900"><span>Property protection</span></figure>
+            <figure class="img-tile"><img loading="lazy" src="images/framework/outputs/energy-security.webp" alt="" width="1200" height="900"><span>Energy security</span></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Recent work</span>
+        <h2 class="section-title">Case studies</h2>
+        <p class="section-lead">Selected research from our team and collaborators, across different regions and hazards. We add new case studies as projects are completed.</p>
+      </div>
+      <div class="work-grid">
+        <a href="san-luis-bridge.html" class="work-card reveal">
+          <div class="work-thumb"><img loading="lazy" src="images/insights/thumbs/san-luis.webp" alt="SPH simulation of a hurricane wave carrying a shipping container toward a bridge girder" width="960" height="540"><span class="work-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Galveston, Texas Gulf Coast</span></div>
+          <div class="work-body">
+            <div class="work-meta"><span class="tag">Coastal hazards</span><span class="date">February 2026</span></div>
+            <h3>Wave–Debris–Structure Interaction for Coastal Bridges</h3>
+            <p class="work-sub">San Luis Pass Bridge</p>
+            <p class="work-excerpt">How storm surge, hurricane waves and a floating shipping container combine to load the girders of an exposed coastal bridge, modeled with a coupled SPH framework.</p>
+            <span class="read-more">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a href="guadalupe-flood.html" class="work-card reveal d1">
+          <div class="work-thumb"><img loading="lazy" src="images/insights/thumbs/guadalupe.webp" alt="High-resolution flood simulation compared with FEMA hazard maps" width="960" height="540"><span class="work-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Kerr County, Central Texas</span></div>
+          <div class="work-body">
+            <div class="work-meta"><span class="tag">Floods</span><span class="date">January 2026</span></div>
+            <h3>Community-Scale Flood Intelligence</h3>
+            <p class="work-sub">Guadalupe River Watershed</p>
+            <p class="work-excerpt">High-resolution modeling of the July 2025 Guadalupe River flood, revealing inundation beyond FEMA hazard maps across Kerr County and the Texas Hill Country.</p>
+            <span class="read-more">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="partners">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="kicker">Who we work with</span>
+        <h2 class="section-title">Built for the people who plan, design and protect</h2>
+      </div>
+      <div class="chip-grid">
+        <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/><path d="M22 9v6"/></svg>Universities &amp; research institutes</div>
+        <div class="chip reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21L9 3M19 21L15 3M12 6v2M12 11v2M12 16v2"/></svg>Transportation agencies</div>
+        <div class="chip reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V9l5-3v15"/><path d="M10 21V4l9 4v13"/><path d="M13 10h3M13 14h3M7 12h1M7 16h1"/></svg>Cities, counties &amp; municipalities</div>
+        <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Insurers &amp; risk analysts</div>
+        <div class="chip reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M5 18v-3a7 7 0 0 1 14 0v3"/><path d="M10 8V5h4v3"/></svg>Engineering &amp; consulting firms</div>
+        <div class="chip reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Utilities &amp; energy operators</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" id="experience">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="kicker">Our experience</span>
+        <h2 class="section-title">Where we’ve built, learned and collaborated</h2>
+        <p class="section-lead">Our team’s research and engineering experience spans leading universities, national laboratories and industry.</p>
+      </div>
+      <ul class="logo-wall">
+        <li class="reveal"><img class="logo-tall" src="images/partners/tamu.png" alt="Texas A&amp;M University" height="64"></li>
+        <li class="reveal d1"><img src="images/partners/nrel.png" alt="National Renewable Energy Laboratory (NREL)" height="64"></li>
+        <li class="reveal d2"><img src="images/partners/argonne.png" alt="Argonne National Laboratory" height="64"></li>
+        <!-- Hidden for now; uncomment to show:
+        <li class="reveal d3"><img class="logo-tall" src="images/partners/furth.png" alt="Fürth Laboratory" height="64"></li>
+        <li class="reveal d3"><img class="logo-tall" src="images/partners/kelson.png" alt="Kelson Marine" height="64"></li>
+        -->
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Facing a resilience challenge?</h2>
+        <p>Tell us about the site, the hazard and the decision you need to make, and we will tell you how we can help.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="collaborate.html">Collaborate with us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-container">
-
       <div class="footer-col">
         <div class="footer-brand">
-          <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
+          <img class="logo-mark" src="images/brand/logo.svg" alt="" width="32" height="32">
           <span>RUCEEE LAB</span>
         </div>
-        <p>Resilience for Urban Climate, Energy and Environmental Extremes.</p>
+        <p>Resilience for Urban Climate, Energy and Environmental Extremes. Physics-based modeling and physics-informed AI for communities, infrastructure and energy systems.</p>
       </div>
-
       <div class="footer-col">
-        <h4>Sitemap</h4>
+        <h4>Explore</h4>
         <ul class="footer-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="resolution-v0-1.html">Resolution v0.1</a></li>
+          <!-- <li><a href="resolution-v0-1.html">Products</a></li> -->
           <li><a href="insights.html">Insights</a></li>
           <li><a href="collaborate.html">Collaborate</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <p class="footer-email"><a class="plain-email" href="mailto:info@ruceeelab.com">info@ruceeelab.com</a></p>
-        <ul class="footer-locations">
-          <li><span class="loc-dot"></span><span class="loc-city">London, UK</span></li>
-          <li><span class="loc-dot"></span><span class="loc-city">College Station, TX, USA</span></li>
-          <li><span class="loc-dot"></span><span class="loc-city">Giza, Egypt</span></li>
-        </ul>
+        <h4>Get in touch</h4>
+        <p class="footer-email"><a href="mailto:info@ruceeelab.com">info@ruceeelab.com</a></p>
+        <p class="footer-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>College Station, Texas, USA</span></p>
       </div>
-
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 RUCEEE LAB. All rights reserved.</p>
+      <p>&copy; <span id="year">2026</span> RUCEEE LAB. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    /* Hero background rotation */
-    const heroSection = document.querySelector('.hero');
-    const heroOverlay = 'linear-gradient(rgba(2,8,19,0.3), rgba(2,8,19,0.45))';
-    const images = [
-      "url('images/home/hero-1.webp')",
-      "url('images/home/hero-2.webp')",
-      "url('images/home/hero-3.webp')",
-      "url('images/home/hero-4.webp')",
-      "url('images/home/hero-5.webp')"
-    ];
-    let currentIndex = 0;
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      heroSection.style.backgroundImage = `${heroOverlay}, ${images[currentIndex]}`;
-    }, 6000);
-
-    /* Navigation */
-    const navToggle = document.getElementById('navToggle');
-    const navLinks  = document.getElementById('navLinks');
-
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.classList.toggle('open', isOpen);
-      navToggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    /* Close menu after tapping a link */
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    /* Products dropdown */
-    document.querySelectorAll('.nav-drop-toggle').forEach(btn => {
-      btn.addEventListener('click', event => {
-        event.stopPropagation();
-        const item = btn.parentElement;
-        const isOpen = item.classList.toggle('open');
-        btn.setAttribute('aria-expanded', isOpen);
-      });
-    });
-
-    document.addEventListener('click', () => {
-      document.querySelectorAll('.nav-item-drop.open').forEach(item => {
-        item.classList.remove('open');
-        item.querySelector('.nav-drop-toggle').setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    /* Network background */
-    (function () {
-      const canvas = document.getElementById('netBg');
-      if (!canvas) return;
-
-      const ctx = canvas.getContext('2d');
-      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      let width = 0, height = 0, nodes = [];
-
-      function resize() {
-        const dpr = window.devicePixelRatio || 1;
-        width  = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width  = width  * dpr;
-        canvas.height = height * dpr;
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        seed();
-      }
-
-      function seed() {
-        const count = Math.min(130, Math.round((width * height) / 15000));
-        nodes = [];
-        for (let i = 0; i < count; i++) {
-          nodes.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.18,
-            vy: (Math.random() - 0.5) * 0.18,
-            r: 1.2 + Math.random() * 1.5
-          });
-        }
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, width, height);
-        for (let i = 0; i < nodes.length; i++) {
-          for (let j = i + 1; j < nodes.length; j++) {
-            const dx = nodes[i].x - nodes[j].x;
-            const dy = nodes[i].y - nodes[j].y;
-            const d  = Math.sqrt(dx * dx + dy * dy);
-            if (d < 155) {
-              ctx.strokeStyle = 'rgba(34,211,238,' + (0.42 * (1 - d / 155)).toFixed(3) + ')';
-              ctx.lineWidth = 0.9;
-              ctx.beginPath();
-              ctx.moveTo(nodes[i].x, nodes[i].y);
-              ctx.lineTo(nodes[j].x, nodes[j].y);
-              ctx.stroke();
-            }
-          }
-        }
-        ctx.fillStyle = 'rgba(34,211,238,0.85)';
-        for (const n of nodes) {
-          ctx.beginPath();
-          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-
-      function step() {
-        for (const n of nodes) {
-          n.x += n.vx;
-          n.y += n.vy;
-          if (n.x < 0 || n.x > width)  n.vx *= -1;
-          if (n.y < 0 || n.y > height) n.vy *= -1;
-        }
-        draw();
-        requestAnimationFrame(step);
-      }
-
-      resize();
-      window.addEventListener('resize', () => { resize(); draw(); });
-
-      if (reduced) { draw(); } else { requestAnimationFrame(step); }
-    })();
-  </script>
-
+  <script src="site.js" defer></script>
 </body>
 </html>

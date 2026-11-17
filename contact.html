@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — RUCEEE LAB</title>
-  <meta name="description" content="Contact RUCEEE LAB at info@ruceeelab.com. Offices in London, College Station (Texas) and Giza.">
+  <meta name="description" content="Contact RUCEEE LAB in College Station, Texas. General enquiries, partnerships and careers.">
   <link rel="canonical" href="https://www.ruceeelab.com/contact.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RUCEEE LAB">
   <meta property="og:title" content="Contact — RUCEEE LAB">
-  <meta property="og:description" content="Contact RUCEEE LAB at info@ruceeelab.com. Offices in London, College Station (Texas) and Giza.">
+  <meta property="og:description" content="Contact RUCEEE LAB in College Station, Texas. General enquiries, partnerships and careers.">
   <meta property="og:url" content="https://www.ruceeelab.com/contact.html">
   <meta property="og:image" content="https://www.ruceeelab.com/images/brand/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#030a16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/brand/logo.svg" type="image/svg+xml">
 </head>
@@ -20,185 +24,101 @@
 
   <canvas class="net-bg" id="netBg" aria-hidden="true"></canvas>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
+        <img class="logo-mark" src="images/brand/logo.svg" alt="" width="38" height="38">
         <span>RUCEEE LAB</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
-        <li class="nav-item-drop">
-          <button class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">Products<span class="nav-caret" aria-hidden="true"></span></button>
-          <ul class="nav-drop-menu">
-            <li><a href="resolution-v0-1.html">Resolution v0.1</a></li>
-          </ul>
-        </li>
+        <!-- Products (hidden until launch):
+        <li><a href="resolution-v0-1.html">Products</a></li>
+        -->
         <li><a href="insights.html">Insights</a></li>
         <li><a href="collaborate.html">Collaborate</a></li>
         <li><a href="careers.html">Careers</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active nav-cta">Contact</a></li>
       </ul>
     </div>
   </nav>
 
+  <main>
   <header class="page-hero">
-    <h1>Contact</h1>
-    <p>Get in touch with the RUCEEE LAB team.</p>
+    <div class="container">
+      <span class="kicker reveal">Contact</span>
+      <h1 class="reveal d1">Get in touch</h1>
+      <p class="reveal d2">Questions, ideas or a project in mind? Reach the right person directly.</p>
+    </div>
   </header>
 
   <section class="section">
-    <div class="email-block">
-      <span class="email-label">Email us</span>
-      <a class="plain-email" href="mailto:info@ruceeelab.com">info@ruceeelab.com</a>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="panel contact-card reveal">
+          <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+          <h3>General enquiries</h3>
+          <p>Questions about our work, media and everything else.</p>
+          <a class="mail" href="mailto:info@ruceeelab.com">info@ruceeelab.com</a>
+        </div>
+        <div class="panel contact-card reveal d1">
+          <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2.5.7 4 2.8 4 6"/></svg></div>
+          <h3>Partnerships &amp; proposals</h3>
+          <p>Research collaborations, joint proposals and engineering studies.</p>
+          <a class="mail" href="mailto:collaborate@ruceeelab.com">collaborate@ruceeelab.com</a>
+        </div>
+        <div class="panel contact-card reveal d2">
+          <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></div>
+          <h3>Careers</h3>
+          <p>Send your CV and a short note on the work you would like to do.</p>
+          <a class="mail" href="mailto:careers@ruceeelab.com">careers@ruceeelab.com</a>
+        </div>
+      </div>
+      <div class="panel location-card reveal">
+        <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+        <div>
+          <h3>College Station, Texas, USA</h3>
+          <p>Our team is based in College Station, home of Texas A&amp;M University.</p>
+        </div>
+      </div>
     </div>
   </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-container">
-
       <div class="footer-col">
         <div class="footer-brand">
-          <img class="logo-mark" src="images/brand/logo.svg" alt="RUCEEE LAB logo">
+          <img class="logo-mark" src="images/brand/logo.svg" alt="" width="32" height="32">
           <span>RUCEEE LAB</span>
         </div>
-        <p>Resilience for Urban Climate, Energy and Environmental Extremes.</p>
+        <p>Resilience for Urban Climate, Energy and Environmental Extremes. Physics-based modeling and physics-informed AI for communities, infrastructure and energy systems.</p>
       </div>
-
       <div class="footer-col">
-        <h4>Sitemap</h4>
+        <h4>Explore</h4>
         <ul class="footer-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="resolution-v0-1.html">Resolution v0.1</a></li>
+          <!-- <li><a href="resolution-v0-1.html">Products</a></li> -->
           <li><a href="insights.html">Insights</a></li>
           <li><a href="collaborate.html">Collaborate</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <p class="footer-email"><a class="plain-email" href="mailto:info@ruceeelab.com">info@ruceeelab.com</a></p>
-        <ul class="footer-locations">
-          <li><span class="loc-dot"></span><span class="loc-city">London, UK</span></li>
-          <li><span class="loc-dot"></span><span class="loc-city">College Station, TX, USA</span></li>
-          <li><span class="loc-dot"></span><span class="loc-city">Giza, Egypt</span></li>
-        </ul>
+        <h4>Get in touch</h4>
+        <p class="footer-email"><a href="mailto:info@ruceeelab.com">info@ruceeelab.com</a></p>
+        <p class="footer-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>College Station, Texas, USA</span></p>
       </div>
-
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 RUCEEE LAB. All rights reserved.</p>
+      <p>&copy; <span id="year">2026</span> RUCEEE LAB. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    /* Navigation */
-    const navToggle = document.getElementById('navToggle');
-    const navLinks  = document.getElementById('navLinks');
-
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.classList.toggle('open', isOpen);
-      navToggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    /* Products dropdown */
-    document.querySelectorAll('.nav-drop-toggle').forEach(btn => {
-      btn.addEventListener('click', event => {
-        event.stopPropagation();
-        const item = btn.parentElement;
-        const isOpen = item.classList.toggle('open');
-        btn.setAttribute('aria-expanded', isOpen);
-      });
-    });
-
-    document.addEventListener('click', () => {
-      document.querySelectorAll('.nav-item-drop.open').forEach(item => {
-        item.classList.remove('open');
-        item.querySelector('.nav-drop-toggle').setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    /* Network background */
-    (function () {
-      const canvas = document.getElementById('netBg');
-      if (!canvas) return;
-
-      const ctx = canvas.getContext('2d');
-      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      let width = 0, height = 0, nodes = [];
-
-      function resize() {
-        const dpr = window.devicePixelRatio || 1;
-        width  = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width  = width  * dpr;
-        canvas.height = height * dpr;
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        seed();
-      }
-
-      function seed() {
-        const count = Math.min(130, Math.round((width * height) / 15000));
-        nodes = [];
-        for (let i = 0; i < count; i++) {
-          nodes.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.18,
-            vy: (Math.random() - 0.5) * 0.18,
-            r: 1.2 + Math.random() * 1.5
-          });
-        }
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, width, height);
-        for (let i = 0; i < nodes.length; i++) {
-          for (let j = i + 1; j < nodes.length; j++) {
-            const dx = nodes[i].x - nodes[j].x;
-            const dy = nodes[i].y - nodes[j].y;
-            const d  = Math.sqrt(dx * dx + dy * dy);
-            if (d < 155) {
-              ctx.strokeStyle = 'rgba(34,211,238,' + (0.42 * (1 - d / 155)).toFixed(3) + ')';
-              ctx.lineWidth = 0.9;
-              ctx.beginPath();
-              ctx.moveTo(nodes[i].x, nodes[i].y);
-              ctx.lineTo(nodes[j].x, nodes[j].y);
-              ctx.stroke();
-            }
-          }
-        }
-        ctx.fillStyle = 'rgba(34,211,238,0.85)';
-        for (const n of nodes) {
-          ctx.beginPath();
-          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-
-      function step() {
-        for (const n of nodes) {
-          n.x += n.vx;
-          n.y += n.vy;
-          if (n.x < 0 || n.x > width)  n.vx *= -1;
-          if (n.y < 0 || n.y > height) n.vy *= -1;
-        }
-        draw();
-        requestAnimationFrame(step);
-      }
-
-      resize();
-      window.addEventListener('resize', () => { resize(); draw(); });
-
-      if (reduced) { draw(); } else { requestAnimationFrame(step); }
-    })();
-  </script>
-
+  <script src="site.js" defer></script>
 </body>
 </html>
