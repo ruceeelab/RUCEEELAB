@@ -128,7 +128,7 @@ body {
   position: relative;
   height: 85vh;
   min-height: 500px;
-  background: linear-gradient(rgba(2,8,19,0.3), rgba(2,8,19,0.45)), url('images/home/hero-1.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(2,8,19,0.3), rgba(2,8,19,0.45)), url('images/home/hero-1.webp') center/cover no-repeat;
   display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem;
   transition: background-image 1.5s ease-in-out;
 }
@@ -1095,7 +1095,12 @@ body {
   font-weight: 600;
   letter-spacing: 0.3px;
   word-break: break-word;
-  user-select: all;
+  text-decoration: none;
+}
+a.plain-email:hover,
+a.plain-email:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .email-block .plain-email {
   display: block;

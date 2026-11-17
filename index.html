@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RUCEEE LAB — Resilience for Urban Climate, Energy and Environmental Extremes</title>
+  <meta name="description" content="RUCEEE LAB combines physics-based modeling and physics-informed generative AI to assess community risk from floods, wind, wildfire and extreme heat, and to design mitigation that protects people, infrastructure and energy systems.">
+  <link rel="canonical" href="https://www.ruceeelab.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUCEEE LAB">
+  <meta property="og:title" content="RUCEEE LAB — Resilience for Urban Climate, Energy and Environmental Extremes">
+  <meta property="og:description" content="RUCEEE LAB combines physics-based modeling and physics-informed generative AI to assess community risk from floods, wind, wildfire and extreme heat, and to design mitigation that protects people, infrastructure and energy systems.">
+  <meta property="og:url" content="https://www.ruceeelab.com/">
+  <meta property="og:image" content="https://www.ruceeelab.com/images/brand/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/brand/logo.svg" type="image/svg+xml">
 </head>
@@ -75,22 +84,22 @@
         <h3 class="col-label label-red">Environmental Drivers</h3>
 
         <div class="node-card card-red">
-          <img class="card-img" src="images/framework/inputs/Flood.png" alt="Flood">
+          <img loading="lazy" class="card-img" src="images/framework/inputs/flood.webp" alt="Flood">
           Flood
         </div>
 
         <div class="node-card card-red">
-          <img class="card-img" src="images/framework/inputs/Wind2.png" alt="Wind">
+          <img loading="lazy" class="card-img" src="images/framework/inputs/wind.webp" alt="Wind">
           Wind
         </div>
 
         <div class="node-card card-red">
-          <img class="card-img" src="images/framework/inputs/wildfire.png" alt="Wildfire">
+          <img loading="lazy" class="card-img" src="images/framework/inputs/wildfire.webp" alt="Wildfire">
           Wildfire
         </div>
 
         <div class="node-card card-red">
-          <img class="card-img" src="images/framework/inputs/extreme.png" alt="Extreme Heat/Cold">
+          <img loading="lazy" class="card-img" src="images/framework/inputs/extreme.webp" alt="Extreme Heat/Cold">
           Extreme Heat/Cold
         </div>
 
@@ -122,7 +131,7 @@
             <div class="tech-item">
               <div class="tech-icon">🧠</div>
               <div class="tech-text">
-                <strong>Generative AI - Physics-Informed ML</strong>
+                <strong>Generative AI &amp; Physics-Informed ML</strong>
               </div>
             </div>
             <div class="tech-item">
@@ -142,22 +151,22 @@
         <h3 class="col-label label-green">Strategic Outcomes</h3>
 
         <div class="node-card card-green">
-          <img class="card-img" src="images/framework/outputs/people%20safety%201.png" alt="People Safety">
+          <img loading="lazy" class="card-img" src="images/framework/outputs/people-safety.webp" alt="People Safety">
           People Safety
         </div>
 
         <div class="node-card card-green">
-          <img class="card-img" src="images/framework/outputs/infrastructure%20reselience.png" alt="Infrastructure Resilience">
+          <img loading="lazy" class="card-img" src="images/framework/outputs/infrastructure-resilience.webp" alt="Infrastructure Resilience">
           Infrastructure Resilience
         </div>
 
         <div class="node-card card-green">
-          <img class="card-img" src="images/framework/outputs/properity%20protection%201.png" alt="Property Protection">
+          <img loading="lazy" class="card-img" src="images/framework/outputs/property-protection.webp" alt="Property Protection">
           Property Protection
         </div>
 
         <div class="node-card card-green">
-          <img class="card-img" src="images/framework/outputs/energy%20security.png" alt="Energy Security">
+          <img loading="lazy" class="card-img" src="images/framework/outputs/energy-security.webp" alt="Energy Security">
           Energy Security
         </div>
 
@@ -191,7 +200,7 @@
 
       <div class="footer-col">
         <h4>Get in Touch</h4>
-        <p class="footer-email"><span class="plain-email">info@ruceeelab.com</span></p>
+        <p class="footer-email"><a class="plain-email" href="mailto:info@ruceeelab.com">info@ruceeelab.com</a></p>
         <ul class="footer-locations">
           <li><span class="loc-dot"></span><span class="loc-city">London, UK</span></li>
           <li><span class="loc-dot"></span><span class="loc-city">College Station, TX, USA</span></li>
@@ -210,11 +219,11 @@
     const heroSection = document.querySelector('.hero');
     const heroOverlay = 'linear-gradient(rgba(2,8,19,0.3), rgba(2,8,19,0.45))';
     const images = [
-      "url('images/home/hero-1.jpg')",
-      "url('images/home/hero-2.jpg')",
-      "url('images/home/hero-3.jpg')",
-      "url('images/home/hero-4.jpg')",
-      "url('images/home/hero-5.jpg')"
+      "url('images/home/hero-1.webp')",
+      "url('images/home/hero-2.webp')",
+      "url('images/home/hero-3.webp')",
+      "url('images/home/hero-4.webp')",
+      "url('images/home/hero-5.webp')"
     ];
     let currentIndex = 0;
     setInterval(() => {
