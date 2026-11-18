@@ -1057,3 +1057,6 @@ main, .footer { position: relative; z-index: 1; }
   .chain { margin-left: -0.4rem; margin-right: -0.4rem; gap: 0.15rem; }
   .chain li { padding: 0.28rem 0.4rem; font-size: 0.66rem; }
 }
+
+/* Larger section heading (e.g. "What we do") */
+.section-title-xl { font-size: clamp(2.4rem, 4.6vw, 3.6rem); margin-bottom: 1.2rem; }
