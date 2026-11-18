@@ -26,7 +26,11 @@
 
   /* Hero slideshow: cross-fade between stacked slides */
   const slides = document.querySelectorAll('.hero-slide');
-  if (slides.length > 1 && !reduced) {
+  const hero = document.querySelector('.hero');
+  if (slides.length > 1 && !reduced && hero) {
+    /* fetch the other photos only after the page has finished loading */
+    const ready = () => setTimeout(() => hero.classList.add('ready'), 500);
+    if (document.readyState === 'complete') ready(); else window.addEventListener('load', ready);
     let i = 0;
     setInterval(() => {
       slides[i].classList.remove('active');

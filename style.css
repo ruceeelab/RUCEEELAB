@@ -214,6 +214,15 @@ main, .footer { position: relative; z-index: 1; }
   z-index: -2;
 }
 .hero-slide.active { opacity: 1; transform: scale(1); }
+/* First photo loads immediately; the others only after the page has loaded (site.js adds .ready) */
+.hero-slide.s1 { background-image: url('images/home/hero-wind.webp'); }
+.hero.ready .hero-slide.s2 { background-image: url('images/home/hero-flood.webp'); }
+.hero.ready .hero-slide.s3 { background-image: url('images/home/hero-city.webp'); }
+@media (max-width: 900px) {
+  .hero-slide.s1 { background-image: url('images/home/hero-wind-sm.webp'); }
+  .hero.ready .hero-slide.s2 { background-image: url('images/home/hero-flood-sm.webp'); }
+  .hero.ready .hero-slide.s3 { background-image: url('images/home/hero-city-sm.webp'); }
+}
 .hero::after {
   content: "";
   position: absolute;

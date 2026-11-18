@@ -14,12 +14,67 @@
   <meta property="og:image" content="https://www.ruceeelab.com/images/brand/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#030a16">
-  <link rel="preload" as="image" href="images/home/hero-wind.webp">
+  <link rel="preload" as="image" href="images/home/hero-wind-sm.webp" media="(max-width: 900px)">
+  <link rel="preload" as="image" href="images/home/hero-wind.webp" media="(min-width: 901px)">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.ruceeelab.com/#organization",
+        "name": "RUCEEE LAB",
+        "alternateName": [
+          "RUCEEE Lab",
+          "RUCEEE",
+          "Resilience for Urban Climate, Energy and Environmental Extremes"
+        ],
+        "url": "https://www.ruceeelab.com/",
+        "logo": "https://www.ruceeelab.com/images/brand/logo-square.png",
+        "email": "info@ruceeelab.com",
+        "description": "Climate resilience engineering: physics-based modeling and physics-informed AI for floods, coastal hazards, wind, wildfire, extreme heat and energy systems.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "College Station",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
+        "areaServed": "US",
+        "knowsAbout": [
+          "Flood modeling",
+          "Coastal hazards",
+          "Storm surge",
+          "Climate resilience",
+          "Physics-informed machine learning",
+          "Generative AI",
+          "Computational fluid dynamics",
+          "Infrastructure resilience",
+          "Urban heat",
+          "Energy security"
+        ],
+        "sameAs": [
+          "https://github.com/ruceeelab"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.ruceeelab.com/#website",
+        "url": "https://www.ruceeelab.com/",
+        "name": "RUCEEE LAB",
+        "alternateName": "RUCEEE Lab",
+        "publisher": {
+          "@id": "https://www.ruceeelab.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/brand/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
 </head>
 <body>
 
@@ -49,9 +104,9 @@
 
   <main>
   <header class="hero">
-    <div class="hero-slide active" style="background-image:url('images/home/hero-wind.webp')"></div>
-    <div class="hero-slide" style="background-image:url('images/home/hero-flood.webp')"></div>
-    <div class="hero-slide" style="background-image:url('images/home/hero-city.webp')"></div>
+    <div class="hero-slide s1 active"></div>
+    <div class="hero-slide s2"></div>
+    <div class="hero-slide s3"></div>
     <div class="hero-content">
       <h1 class="reveal d1">Resilience for Urban Climate, <span class="text-grad">Energy &amp; Environmental Extremes</span></h1>
       <p class="hero-lead reveal d2">We pair high-fidelity physics-based modeling with physics-informed AI to show where floods, storms, wildfire and extreme heat will hit hardest, and which measures will protect people and infrastructure.</p>
