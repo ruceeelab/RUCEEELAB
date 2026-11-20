@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.ruceeelab.com/</loc><lastmod>2026-11-18</lastmod><priority>1.0</priority></url>
-  <url><loc>https://www.ruceeelab.com/collaborate.html</loc><lastmod>2026-11-18</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.ruceeelab.com/careers.html</loc><lastmod>2026-11-18</lastmod><priority>0.5</priority></url>
-  <url><loc>https://www.ruceeelab.com/contact.html</loc><lastmod>2026-11-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.ruceeelab.com/</loc><lastmod>2026-11-20</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.ruceeelab.com/sectors.html</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.ruceeelab.com/communities.html</loc><lastmod>2026-11-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.ruceeelab.com/energy.html</loc><lastmod>2026-11-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.ruceeelab.com/infrastructure.html</loc><lastmod>2026-11-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.ruceeelab.com/insurance.html</loc><lastmod>2026-11-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.ruceeelab.com/real-estate.html</loc><lastmod>2026-11-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.ruceeelab.com/agriculture.html</loc><lastmod>2026-11-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.ruceeelab.com/collaborate.html</loc><lastmod>2026-11-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.ruceeelab.com/careers.html</loc><lastmod>2026-11-20</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.ruceeelab.com/contact.html</loc><lastmod>2026-11-20</lastmod><priority>0.6</priority></url>
 </urlset>

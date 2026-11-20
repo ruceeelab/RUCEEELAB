@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resilient infrastructure — RUCEEE LAB</title>
+  <meta name="description" content="Physics-based assessment of how floods, storm surge, waves and debris load bridges, roads, coastal and hydraulic structures.">
+  <link rel="canonical" href="https://www.ruceeelab.com/infrastructure.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUCEEE LAB">
+  <meta property="og:title" content="Resilient infrastructure — RUCEEE LAB">
+  <meta property="og:description" content="Physics-based assessment of how floods, storm surge, waves and debris load bridges, roads, coastal and hydraulic structures.">
+  <meta property="og:url" content="https://www.ruceeelab.com/infrastructure.html">
+  <meta property="og:image" content="https://www.ruceeelab.com/images/sectors/infrastructure-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#030a16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/brand/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="images/brand/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
+</head>
+<body>
+
+  <canvas class="net-bg" id="netBg" aria-hidden="true"></canvas>
+
+  <nav class="navbar" aria-label="Main">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img class="logo-mark" src="images/brand/logo.svg" alt="" width="38" height="38">
+        <span>RUCEEE LAB</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <!-- Products (hidden until launch):
+        <li><a href="resolution-v0-1.html">Products</a></li>
+        -->
+        <li class="nav-drop"><a href="sectors.html" class="active">Sectors<span class="nav-caret" aria-hidden="true"></span></a><ul class="nav-drop-menu"><li><a href="communities.html">Communities &amp; public sector</a></li><li><a href="energy.html">Energy &amp; utilities</a></li><li><a href="infrastructure.html">Infrastructure &amp; transportation</a></li><li><a href="insurance.html">Insurance &amp; finance</a></li><li><a href="real-estate.html">Real estate &amp; development</a></li><li><a href="agriculture.html">Agriculture &amp; agribusiness</a></li></ul></li>
+        <li><a href="collaborate.html">Collaborate</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+  <header class="sector-hero" style="background-image:url('images/sectors/infrastructure.webp')">
+    <div class="container">
+      <span class="kicker reveal">Sectors · Infrastructure</span>
+      <h1 class="reveal d1">Resilient infrastructure</h1>
+      <p class="reveal d2">Physics-based assessment of how floods, storm surge, waves and debris load bridges, roads, coastal and hydraulic structures.</p>
+      <div class="hero-actions reveal d3">
+        <a class="btn btn-primary" href="contact.html">Get in touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="collaborate.html">Collaborate with us</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container sector-intro">
+      <div class="reveal">
+        <p>Bridges, roads, ports and water infrastructure keep communities connected, and are essential before, during and after extreme events, when evacuation and emergency access depend on them.</p>
+        <p>Many of these assets face combined hazards they were never designed for: storm surge and waves together, floating debris, scour and erosion, and flood levels rising with a changing climate.</p>
+        <p>We use high-resolution hydrodynamic and fluid–structure modeling to quantify those combined loads, and to help owners understand which assets are most vulnerable.</p>
+      </div>
+      <aside class="panel hazard-panel reveal d1">
+        <h2>Hazards we address</h2>
+        <ul class="hazard-chips"><li>Flooding</li><li>Storm surge &amp; waves</li><li>Debris impact</li><li>Erosion &amp; scour</li></ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">How we help</span>
+        <h2 class="section-title">What we bring to infrastructure</h2>
+      </div>
+      <div class="help-grid">
+        <div class="panel help-card reveal">
+          <span class="help-num">01</span>
+          <h3>Bridges and coastal structures</h3>
+          <p>Simulating storm surge, wave and floating-debris loads on bridges and coastal structures under extreme hurricane conditions.</p>
+        </div>
+        <div class="panel help-card reveal d1">
+          <span class="help-num">02</span>
+          <h3>Network exposure</h3>
+          <p>Mapping flooded roads, bridges and evacuation routes across a region, to see how a network performs during an event.</p>
+        </div>
+        <div class="panel help-card reveal d2">
+          <span class="help-num">03</span>
+          <h3>Hydraulic structures and erosion</h3>
+          <p>Assessing dams, levees, culverts and channels under extreme flows, including scour and sediment transport.</p>
+        </div>
+        <div class="panel help-card reveal d3">
+          <span class="help-num">04</span>
+          <h3>Prioritizing retrofit and design</h3>
+          <p>Ranking assets by risk, to target inspection, strengthening and adaptation where it delivers the greatest benefit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" id="horizons">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">From weeks to decades</span>
+        <h2 class="section-title">Planning across time horizons</h2>
+        <p class="section-lead">We study environmental extremes from subseasonal and seasonal forecasts to decadal and multi-decadal climate projections, so plans hold up in the coming weeks and in the coming decades.</p>
+      </div>
+      <div class="horizon-track">
+        <div class="horizon reveal">
+          <span class="horizon-dot" aria-hidden="true"></span>
+          <span class="horizon-span">2 weeks – 2 months</span>
+          <h3>Subseasonal</h3>
+          <p>Weeks-ahead heavy-rainfall and storm outlooks to schedule inspections, close vulnerable routes and protect work sites.</p>
+        </div>
+        <div class="horizon reveal d1">
+          <span class="horizon-dot" aria-hidden="true"></span>
+          <span class="horizon-span">1 – 12 months</span>
+          <h3>Seasonal</h3>
+          <p>Season-ahead flood and hurricane outlooks to plan maintenance windows and emergency readiness.</p>
+        </div>
+        <div class="horizon reveal d2">
+          <span class="horizon-dot" aria-hidden="true"></span>
+          <span class="horizon-span">1 – 10 years</span>
+          <h3>Decadal</h3>
+          <p>Near-term hazard trends to prioritize retrofit, scour protection and capital programs.</p>
+        </div>
+        <div class="horizon reveal d3">
+          <span class="horizon-dot" aria-hidden="true"></span>
+          <span class="horizon-span">To 2050 and beyond</span>
+          <h3>Multi-decadal</h3>
+          <p>Long-term projections of flooding, sea level and storm surge for design standards of bridges, roads and coastal structures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Have a question or a project in mind?</h2>
+        <p>Tell us about the challenge you are facing, and we will explore together how our modeling and AI can help.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Get in touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="collaborate.html">Collaborate with us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Explore other sectors</span>
+      </div>
+      <div class="sector-grid sector-grid-compact">
+        <a href="communities.html" class="sector-card reveal">
+          <img loading="lazy" src="images/sectors/communities-card.webp" alt="" width="960" height="540">
+          <div class="sector-card-body">
+            <span class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V9l5-3v15"/><path d="M10 21V4l9 4v13"/><path d="M13 10h3M13 14h3M7 12h1M7 16h1"/></svg></span>
+            <h3>Communities &amp; public sector</h3>
+            <p>Street-scale flood and heat insight for local governments, planners and emergency managers.</p>
+            <span class="read-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a href="energy.html" class="sector-card reveal d1">
+          <img loading="lazy" src="images/sectors/energy-card.webp" alt="" width="960" height="540">
+          <div class="sector-card-body">
+            <span class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+            <h3>Energy &amp; utilities</h3>
+            <p>Hurricane winds, flooding and heat impacts on generation, grids and offshore energy.</p>
+            <span class="read-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a href="insurance.html" class="sector-card reveal d2">
+          <img loading="lazy" src="images/sectors/insurance-card.webp" alt="" width="960" height="540">
+          <div class="sector-card-body">
+            <span class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <h3>Insurance &amp; finance</h3>
+            <p>High-resolution, physics-based hazard insight for pricing, stress testing and disclosure.</p>
+            <span class="read-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a href="real-estate.html" class="sector-card reveal d3">
+          <img loading="lazy" src="images/sectors/real-estate-card.webp" alt="" width="960" height="540">
+          <div class="sector-card-body">
+            <span class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
+            <h3>Real estate &amp; development</h3>
+            <p>Site screening, resilient design and portfolio exposure for developers and owners.</p>
+            <span class="read-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a href="agriculture.html" class="sector-card reveal d3">
+          <img loading="lazy" src="images/sectors/agriculture-card.webp" alt="" width="960" height="540">
+          <div class="sector-card-body">
+            <span class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-6 6-9 16-10-1 10-4 16-10 16"/><path d="M4 21c3-6 7-9 11-11"/></svg></span>
+            <h3>Agriculture &amp; agribusiness</h3>
+            <p>Floods, heat, severe storms and water extremes for farms and rural communities.</p>
+            <span class="read-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img class="logo-mark" src="images/brand/logo.svg" alt="" width="32" height="32">
+          <span>RUCEEE LAB</span>
+        </div>
+        <p>Resilience for Urban Climate, Energy and Environmental Extremes. Physics-based modeling and physics-informed AI for communities, infrastructure and energy systems.</p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">Explore</h2>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sectors.html">Sectors</a></li>
+          <!-- <li><a href="resolution-v0-1.html">Products</a></li> -->
+          <!-- <li><a href="insights.html">Insights</a></li> -->
+          <li><a href="collaborate.html">Collaborate</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">Get in touch</h2>
+        <p class="footer-email"><a href="mailto:info@ruceeelab.com">info@ruceeelab.com</a></p>
+        <p class="footer-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>College Station, Texas, USA</span></p>
+        <!-- LinkedIn (hidden until the page has content):
+        <a class="footer-social" href="https://www.linkedin.com/company/114284099/" target="_blank" rel="noopener" aria-label="RUCEEE LAB on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>Follow us on LinkedIn</span></a>
+        -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> RUCEEE LAB. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+</body>
+</html>
